@@ -6,7 +6,12 @@
     1. O que JavaScript é capaz de fazer?
     2. Como chegamos até aqui?
     3. Dandos os primeiros passos
+    4. Criando o seu primeiro script
 ### Módulo 02: Comandos básicos do JavaScript
+    5. Variáveis e Tipos Primitivos
+    6. Tratamento de dados
+    7. Operadores (Parte 1)
+    8. Operadores (Parte 2)
 ### Módulo 03: Document Object Model
 ### Módulo 04: Condições em JavaScript
 ### Módulo 05: Repetições (laços) em JavaScript
