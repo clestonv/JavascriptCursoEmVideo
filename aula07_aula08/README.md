@@ -91,7 +91,7 @@ estado == 'RJ' || estado == 'SP'      // o estado é RJ ou SP?
 salario > 1500 && sexo != 'M'         // o salário é acima de 1500 e não é um homem
 ~~~
 
-## Ternáriop
+## Ternário
 
 ~~~javascript
 teste ? true : false
