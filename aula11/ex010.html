@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Sistemas de Multa</h1>
+    <p>Velocidade do Carro: 
+        <input type="number" name="txtvel" id="txtvel">Km/h
+        <input type="button" value="Verificar" id="btVerificar">
+    </p>
+
+    <div id="res">
+
+    </div>
+    <script>
+
+        function verificar () {
+            // referenciar elementos da página
+            let txtvel = document.getElementById('txtvel')
+            let res = document.querySelector('div#res')
+            // converter para numero
+            let vel = Number(txtvel.value)
+            res.innerHTML = `Sua velocidade é <strong>${vel}</strong> `
+           
+            if (vel > 60) {
+                res.innerHTML = `Sua velocidade está acima do permitido<br><strong>MULTADO!</strong>`
+            } else {
+                res.innerHTML += `Dentro do Limite.`
+                res.style.background = 'green'
+                res.style.width = '350px'
+                res.style.height = '250px'
+                res.style.lineHeight = '250px'
+                res.style.textAlign = 'center'
+
+            }
+
+        }
+
+        //refernciar botao
+        let btVerificar = document.getElementById('btVerificar')
+        btVerificar.addEventListener('click', verificar)
+    </script>
+    
+</body>
+</html>

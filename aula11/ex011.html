@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Qual pais você é? </h1>
+    <p>País
+        <input type="text" name="inPais" id="inPais">
+        <input type="button" value="Verificar" id="btVerificar">
+    </p>
+
+    <div id="res">
+
+    </div>
+    <script>
+
+        function nacionalidade() {
+            // referenciar elementos da página
+            let inPais = document.getElementById('inPais')
+            let res = document.querySelector('div#res') 
+
+            res.innerHTML = `Seu Pais é ${inPais.value}`
+           
+            if (inPais.value != 'Brasil') {
+                
+                res.innerHTML = `Você é <strong>STRANGEIRO!</strong>`
+            } else {
+                res.innerHTML += `Você é Brasileiro!.`
+                res.style.background = 'green'                
+
+            }
+
+        }
+
+        //refernciar botao
+        let btVerificar = document.getElementById('btVerificar')
+        btVerificar.addEventListener('click', nacionalidade)
+    </script>
+    
+</body>
+</html>
