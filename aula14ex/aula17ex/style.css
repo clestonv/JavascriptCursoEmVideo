@@ -2,7 +2,6 @@ body {
     background-color: rgb(82, 121, 206);
     font: normal 15pt Arial;
     color: #FFF;
-    text-align: center;
 }
 
 header {
@@ -17,11 +16,6 @@ section {
     margin: auto;
     color: rgb(128, 128, 128);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.308);
-    text-align: left;
-}
-
-section #res {
-    height: 40px;
 }
 
 footer {
