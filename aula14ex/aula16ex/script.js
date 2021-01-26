@@ -12,6 +12,17 @@ function gerar() {
     var Fim = Number(inFim.value)
     var Passo = Number(inPasso.value)
 
+    // Validacao dos campos
+    if (Inicio == '') {
+        alert(`Campo Vazio`)
+        res.innerHTML = `O Primeiro campo esta vazio`
+    } else if (Fim == '') {
+        res.innerHTML = 'Compo Fim Vazio !!'
+    } else if (Passo == 0) {
+        alert(`Passo Zero considerando passo 1`)
+        Passo = 1
+    }
+
     for ( var i = Inicio; i <= Fim; i+= Passo) {
         mostra += i + ' &#128073 '
     }

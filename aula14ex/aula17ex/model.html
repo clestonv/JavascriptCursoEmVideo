@@ -8,11 +8,20 @@
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Tabuada</h1>
     </header>
     <section>
-        <div>Testando...</div>
-        <div></div>
+        <div>
+            <p>Numero:
+                <input type="number" name="inNumero" id="inNumero">
+                <input type="button" value="Gerar Tabuada" onclick="gerarTabuada()">
+            </p>
+        </div>
+        <div id="res">
+            <select name="" id="seRes" size="11" multiple="multiple">
+                <option value="">Digite um numero....</option>
+            </select>
+        </div>
     </section>
     <footer>
         <p>&copy; CursomVideo</p>
