@@ -1,31 +1,45 @@
 function gerar() {
     // referenciar os elementos input
-    var inInicio = document.getElementById('inInicio');
-    var inFim = document.getElementById('inFim')
-    var inPasso = document.getElementById('inPasso')
+    let inInicio = document.getElementById('inInicio');
+    let inFim = document.getElementById('inFim')
+    let inPasso = document.getElementById('inPasso')
     
     // referenciar div res
-    var res = document.getElementById('res')
-    var mostra = ''
+    let res = document.getElementById('res')
+    let mostra = ''
+
     // pegando valores dos campos
-    var Inicio = Number(inInicio.value)
-    var Fim = Number(inFim.value)
-    var Passo = Number(inPasso.value)
+    let Inicio = Number(inInicio.value)
+    let Fim = Number(inFim.value)
+    let Passo = Number(inPasso.value)
 
     // Validacao dos campos
-    if (Inicio == '') {
-        alert(`Campo Vazio`)
-        res.innerHTML = `O Primeiro campo esta vazio`
-    } else if (Fim == '') {
-        res.innerHTML = 'Compo Fim Vazio !!'
-    } else if (Passo == 0) {
-        alert(`Passo Zero considerando passo 1`)
-        Passo = 1
+    if (inInicio.value.length == 0 || inFim.value.length == 0 || inPasso.value.length == 0) {
+        alert('[ERRO]\n Faltam dados!')
+    } else {
+        if (Passo <= 0) {
+            window.alert('Passo Inválido!\n Considerando PASSO 1')
+            Passo = 1
+        }
+
+        if (Inicio < Fim) {
+            // Contagem crescente
+            for ( let i = Inicio; i <= Fim; i += Passo) {
+               res.innerHTML += ` ${i} \u{1F449}`
+            }                        
+        } else {
+            // Contagem regressiva
+            for ( let i = Inicio; i >= Fim; i -= Passo) {
+               res.innerHTML += ` ${i} \u{1F449}`
+            }               
+        }
+        res.innerHTML += `\u{1F3C1}`
     }
 
-    for ( var i = Inicio; i <= Fim; i+= Passo) {
-        mostra += i + ' &#128073 '
-    }
-    mostra += ' &#127988'
-    res.innerHTML = `${mostra}`
+    
+
+    
+    
+
+    
 }
