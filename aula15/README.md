@@ -17,7 +17,7 @@
 ## Declarando um array
 
 ~~~javascript
-let num = [5,8,4]
+let num = [5, 8, 4, 7]
 
 console.log(num)
 ~~~
@@ -44,4 +44,28 @@ num.lenght
 
 ~~~javascript
 num.lenght
+~~~
+
+## Percorrendo um array com FOR
+
+~~~javascript
+for(let pos = 0; pos < num.length; pos++) {
+    console.log(`A posição ${pos} tem o valor ${num[pos]}`)
+}
+~~~
+
+## Percorrendo um array com FOR IN
+
+~~~javascript
+for (let pos in num) {
+    console.log(num[pos])
+}
+~~~
+
+## Procurando um elemento no array com indexOf
+
+~~~javascript
+num.indexOf(7) // vai retornar o numero da posição
+
+num.indexOf(3) // vai retornar numero negativo já que não foi encontrado
 ~~~
